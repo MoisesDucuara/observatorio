@@ -8,27 +8,27 @@ class EgresadoController extends Controller
 {
     public function postRegistro(Request $request)
     {
-        $EgresadoDNI=$request['EgresadoDNI'];
-        $EgresadoNombreCompleto=$request['EgresadoNombreCompleto'];
-        $EgresadoGenero=$request['EgresadoGenero'];
-        $EgresadoCorreoElectronico=$request['EgresadoCorreoElectronico'];
-        $EgresadoContrasena=bcrypt($request['EgresadoContrasena']);
-        $EgresadoPais=$request['EgresadoPais'];
-        $EgresadoCiudad=$request['EgresadoCiudad'];
-        $EgresadoEdad=$request['EgresadoEdad'];
+        $egresadoDNI=$request['egresadoDNI'];
+        $egresadoNombreCompleto=$request['egresadoNombreCompleto'];
+        $egresadoGenero=$request['egresadoGenero'];
+        $egresadoCorreoElectronico=$request['egresadoCorreoElectronico'];
+        $egresadoContrasena=bcrypt($request['egresadoContrasena']);
+        $egresadoPais=$request['egresadoPais'];
+        $egresadoCiudad=$request['egresadoCiudad'];
+        $egresadoEdad=$request['egresadoEdad'];
 
-        $Egresado=new Egresado();
+        $egresado=new Egresado();
 
-        $Egresado->EgresadoDNI=$EgresadoDNI;
-        $Egresado->EgresadoNombreCompleto=$EgresadoNombreCompleto;
-        $Egresado->EgresadoGenero=$EgresadoGenero;
-        $Egresado->EgresadoCorreoElectronico=$EgresadoCorreoElectronico;
-        $Egresado->EgresadoContrasena=$EgresadoContrasena;
-        $Egresado->EgresadoPais=$EgresadoPais;
-        $Egresado->EgresadoCiudad=$EgresadoCiudad;
-        $Egresado->EgresadoEdad=$EgresadoEdad;
+        $egresado->egresadoDNI=$egresadoDNI;
+        $egresado->egresadoNombreCompleto=$egresadoNombreCompleto;
+        $egresado->egresadoGenero=$egresadoGenero;
+        $egresado->egresadoCorreoElectronico=$egresadoCorreoElectronico;
+        $egresado->egresadoContrasena=$egresadoContrasena;
+        $egresado->egresadoPais=$egresadoPais;
+        $egresado->egresadoCiudad=$egresadoCiudad;
+        $egresado->egresadoEdad=$egresadoEdad;
 
-        $Egresado->save();
+        $egresado->save();
 
         return redirect()->back();
     }

@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06e53edf-d9ad-463f-9023-323a44915618" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Egresado.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Egresado.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EgresadoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EgresadoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_03_062556_create_egresados_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_03_062556_create_egresados_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +171,7 @@
       <updated>1588376475401</updated>
       <workItem from="1588376501038" duration="15612000" />
       <workItem from="1588461151947" duration="578000" />
-      <workItem from="1588461757486" duration="12193000" />
+      <workItem from="1588461757486" duration="13901000" />
     </task>
     <servers />
   </component>
