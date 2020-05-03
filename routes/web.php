@@ -12,7 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['midleware'=>['web']], function() {
+    Route::get('/', function () {
+        return view('welcome');
+    });
 
-Route::get('/', function () {
-    return view('welcome');
+    Route::post('/registro', [
+        'uses'=>'EgresadoController@postRegistro', 'as'=>'registro'
+    ]);
 });
+
+
+
