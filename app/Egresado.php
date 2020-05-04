@@ -2,16 +2,10 @@
 
 namespace App;
 
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
-class Egresado extends Model
+class Egresado extends Model implements Authenticatable
 {
-    private $egresadoDNI;
-    private $egresadoNombreCompleto;
-    private $egresadoGenero;
-    private $egresadoCorreoElectronico;
-    private $egresadoContrasena;
-    private $egresadoPais;
-    private $egresadoCiudad;
-    private $egresadoEdad;
+    use \Illuminate\Auth\Authenticatable;
 }

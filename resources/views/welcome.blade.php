@@ -11,7 +11,7 @@
             <form action="{{ route('registro') }}" method="post">
                 <div class="form-group">
                     <label for="egresadoDNI">DNI</label>
-                    <input class="form-control" type="number" name="egresadoDNI" id="egresadoDNI">
+                    <input class="form-control" type="text" name="egresadoDNI" id="egresadoDNI">
                 </div>
                 <div class="form-group">
                     <label for="egresadoNombreCompleto">Nombre completo</label>
@@ -39,9 +39,27 @@
                 </div>
                 <div class="form-group">
                     <label for="egresadoEdad">Edad</label>
-                    <input class="form-control" type="number" name="egresadoEdad" id="egresadoEdad">
+                    <input class="form-control" type="text" name="egresadoEdad" id="egresadoEdad">
                 </div>
                 <button type="submit" class="btn btn-primary">Registrarse</button>
+                <input type="hidden" name="_token" value="{{ Session::token() }}">
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Bienvenido</h1>
+            <h6>Por favor, inicie sesión para continuar</h6>
+            <form action="{{ route('iniciosesion') }}" method="post">
+                <div class="form-group">
+                    <label for="egresadoCorreoElectronico">Correo electrónico</label>
+                    <input class="form-control" type="text" name="egresadoCorreoElectronico" id="egresadoCorreoElectronico">
+                </div>
+                <div class="form-group">
+                    <label for="egresadoContrasena">Contraseña</label>
+                    <input class="form-control" type="password" name="egresadoContrasena" id="egresadoContrasena">
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-left: 100px">Iniciar sesión</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
             </form>
         </div>

@@ -17,18 +17,19 @@ class CreateEgresadosTable extends Migration
             $table->integer('egresadoDNI');
             $table->char('egresadoNombreCompleto',30);
             $table->char('egresadoGenero',15);
-            $table->char('egresadoCorreoElectronico',30)->unique();
+            $table->char('egresadoCorreoElectronico',30);
             $table->char('egresadoContrasena');
             $table->char('egresadoPais',20);
             $table->char('egresadoCiudad',20);
-            //$table->integer('egresadoNotificacion')->nullable();
+            $table->integer('egresadoNotificacion')->nullable();
             $table->integer('egresadoEdad');
-            //$table->tinyInteger('egresadoFlagConfirmacion')->nullable();
-            //$table->integer('administradorDNI')->nullable();
+            $table->tinyInteger('egresadoFlagConfirmacion')->nullable();
+            $table->integer('administradorDNI')->nullable();
             $table->rememberToken();
             $table->timestamps();
 
             $table->primary('egresadoDNI');
+            $table->unique('egresadoCorreoElectronico');
             //$table->foreign('administradorDNI',10)->references('administradorDNI')->on('administradores');
         });
     }

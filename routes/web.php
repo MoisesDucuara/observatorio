@@ -20,6 +20,14 @@ Route::group(['midleware'=>['web']], function() {
     Route::post('/registro', [
         'uses'=>'EgresadoController@postRegistro', 'as'=>'registro'
     ]);
+
+    Route::post('/iniciosesion', [
+        'uses'=>'EgresadoController@postInicioSesion', 'as'=>'iniciosesion'
+    ]);
+
+    Route::get('/dashboard', [
+        'uses'=>'EgresadoController@getDashboard', 'as'=>'dashboard'
+    ]);
 });
 
 
