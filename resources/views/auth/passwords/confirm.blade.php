@@ -2,47 +2,39 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row col-md-10">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Confirm Password') }}</div>
+            <br>
+            <form method="POST" action="{{ route('password.confirm') }}">
 
-                <div class="card-body">
-                    {{ __('Please confirm your password before continuing.') }}
+                <div class="form-group">
+                    <div class="col-md-8">
+                        <h6 style="color:#004075">Por favor, confirme su contraseña ants de continuar</h6>
+                        <label for="password" style="color:#004075" class="text-md-left">{{ __('Contraseña) }}</label>
+                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
-                    <form method="POST" action="{{ route('password.confirm') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Confirm Password') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+                        @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
                 </div>
-            </div>
+
+                <div class="col-md-8 form-group col-form-label">
+                    <div class="text-md-center">
+                        <button type="submit" class="btn btn-outline-primary">
+                            {{ __('Confirmar contraseña') }}
+                        </button>
+
+                        @if (Route::has('password.request'))
+                            <a class="btn btn-link" href="{{ route('password.request') }}">
+                                {{ __('¿Olvidó su contraseña?') }}
+                            </a>
+                        @endif
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
