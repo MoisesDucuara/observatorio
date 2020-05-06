@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->integer('edad')->nullable();
             $table->string('notificacion')->nullable();
             $table->tinyInteger('flag_confirmacion')->nullable();
+            $table->string('img_user')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
