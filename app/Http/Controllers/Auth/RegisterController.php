@@ -50,10 +50,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'dni' => ['required', 'string', 'max:10'],
-            'name' => ['required', 'string', 'max:255', 'regex:/(^[A-ZÁÉÍÓÚ]{1}([a-zñáéíóú]+){2,})(\s[A-ZÁÉÍÓÚ]{1}([a-zñáéíóú]+){2,})?$/'],
-            'email' => ['required', 'string', 'email', 'max:255', 'regex:/(.*)@test.com/i', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'dni' => ['required', 'string', 'max:10', 'regex:/[0-9]{1,10}$/i', 'unique:users'],
+            'name' => ['required', 'string', 'max:255', 'regex:/(^[A-ZÁÉÍÓÚÑ]{1}([a-zñáéíóúü]+){2,})(\s[A-ZÁÉÍÓÚÑ]{1}([a-zñáéíóúü]+){2,})?(\s[A-ZÁÉÍÓÚÑ]{1}([a-zñáéíóúü]+){2,})?(\s[A-ZÁÉÍÓÚÑ]{1}([a-zñáéíóúü]+){2,})?(\s[A-ZÁÉÍÓÚÑ]{1}([a-zñáéíóúü]+){2,})?$/'],
+            'email' => ['required', 'string', 'email', 'max:255', 'regex:/(^[a-zA-Z]{1}[a-zA-Z0-9_\-\.]+)@utp.edu.co/i', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed', ],
         ]);
 
         if ($validator->fails()) {
